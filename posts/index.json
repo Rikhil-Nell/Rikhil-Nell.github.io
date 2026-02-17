@@ -1,0 +1,9 @@
+[
+    {
+        "slug": "hello-world",
+        "title": "Building in Public, Starting from Amravati",
+        "date": "2026-02-17",
+        "excerpt": "Why I'm starting this blog, what I'm building, and why I think open-source CRMs with voice agents are worth your attention.",
+        "tags": ["meta", "open-source", "voice-ai"]
+    }
+]
