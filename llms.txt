@@ -1,0 +1,41 @@
+# Rikhil Nellimarla — https://rikhil-nell.github.io
+
+> AI and backend engineer building production voice AI, agent infrastructure, and on-prem government AI systems.
+
+## Canonical URLs
+
+- Home: https://rikhil-nell.github.io/
+- Blog: https://rikhil-nell.github.io/blog.html
+- Resume (PDF): https://rikhil-nell.github.io/assets/Rikhil-Nellimarla-Resume.pdf
+- Sitemap: https://rikhil-nell.github.io/sitemap.xml
+- GitHub: https://github.com/Rikhil-Nell
+- LinkedIn: https://linkedin.com/in/rikhil-nellimarla
+- Email: nrikhil@gmail.com
+
+## Summary
+
+Rikhil Nellimarla builds real-time voice agents, multi-agent backends, and SIP/Asterisk telephony infrastructure. Production systems include 500–600 calls/day voice agents, a 1M+ call log GH200 pipeline, founding AI engineer work at Clink (80+ cafes), and on-prem AI infrastructure for Andhra Pradesh State Police. Event Director for Recon 2026 (600+ participants, ₹21 lakh sponsorship). Y Combinator Startup School participant.
+
+## Site sections (homepage)
+
+- #highlights — strongest proof points
+- #achievements — full achievements list
+- #experience — work history
+- #projects — open-source and shipped projects
+- #skills — technical skills
+- #contact — email and social links
+- #blog — latest blog posts (also at blog.html)
+
+## Blog posts
+
+- async-events-agent-harness — Agent harness async event primitive (2026-06-18)
+- on-prem-ai-government — On-prem AI for government / state police (2026-05-28)
+- sip-livekit-vicidial — LiveKit to VICIDIAL SIP bridging (2026-04-10)
+- recon-yc-startup-school — Recon 2026 Event Director + YC Startup School (2026-03-15)
+- hello-world — Building in public intro (2026-02-17)
+
+Post URL pattern: https://rikhil-nell.github.io/blog.html?post={slug}
+
+## Primary stacks
+
+Python, FastAPI, Pydantic AI, LiveKit, SIP/Asterisk/FreePBX/VICIDIAL, PostgreSQL, Redis, WebRTC, Docker, on-prem ML deployment.

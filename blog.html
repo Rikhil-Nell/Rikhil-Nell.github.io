@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <link rel="alternate" type="text/plain" title="LLM site summary" href="llms.txt">
     <!-- marked.js for rendering markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
     <!-- highlight.js for code syntax highlighting -->
@@ -28,11 +30,18 @@
         <div class="container">
             <a href="index.html" class="nav-logo">rn</a>
             <ul class="nav-links">
+                <li><a href="index.html#highlights">highlights</a></li>
+                <li><a href="index.html#achievements">achievements</a></li>
                 <li><a href="index.html#experience">experience</a></li>
                 <li><a href="index.html#projects">projects</a></li>
-                <li><a href="blog.html" class="active">blog</a></li>
                 <li><a href="index.html#contact">contact</a></li>
+                <li><a href="blog.html" class="active">blog</a></li>
+                <li class="nav-resume-mobile"><a href="assets/Rikhil-Nellimarla-Resume.pdf" target="_blank"
+                        rel="noopener">resume</a></li>
             </ul>
+            <a href="assets/Rikhil-Nellimarla-Resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener">
+                View resume
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="6" x2="21" y2="6" />
@@ -52,7 +61,43 @@
 
         <section>
             <div class="container" id="blog-content">
-                <p class="blog-empty">loading...</p>
+                <div class="blog-list" id="blog-list-fallback">
+                    <a href="blog.html?post=async-events-agent-harness" class="blog-list-item">
+                        <time>2026-06-18</time>
+                        <div class="list-item-content">
+                            <h3>Why Agent Harnesses Need a Third Message Type</h3>
+                            <p>Agentic Village failed because harnesses only allow input at turn boundaries.</p>
+                        </div>
+                    </a>
+                    <a href="blog.html?post=on-prem-ai-government" class="blog-list-item">
+                        <time>2026-05-28</time>
+                        <div class="list-item-content">
+                            <h3>On-Prem AI for Government: When the Cloud Is Not an Option</h3>
+                            <p>Building on-prem AI for state police — model deployment and agentic loops.</p>
+                        </div>
+                    </a>
+                    <a href="blog.html?post=recon-yc-startup-school" class="blog-list-item">
+                        <time>2026-03-15</time>
+                        <div class="list-item-content">
+                            <h3>Recon 2026: Lab Exams, YC Startup School, and a Flagship Fest</h3>
+                            <p>Event Director for 600+ participants, ₹21 lakh sponsorship in a month.</p>
+                        </div>
+                    </a>
+                    <a href="blog.html?post=sip-livekit-vicidial" class="blog-list-item">
+                        <time>2026-04-10</time>
+                        <div class="list-item-content">
+                            <h3>When LiveKit Meets VICIDIAL: Bridging Voice AI to Legacy Telephony</h3>
+                            <p>No SDK for VICIDIAL. 500–600 production calls per day.</p>
+                        </div>
+                    </a>
+                    <a href="blog.html?post=hello-world" class="blog-list-item">
+                        <time>2026-02-17</time>
+                        <div class="list-item-content">
+                            <h3>Building in Public, Starting from Amravati</h3>
+                            <p>Why I'm starting this blog and what I'm building.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -91,6 +136,7 @@
         </div>
     </footer>
 
+    <script src="posts.js"></script>
     <script>
         (function () {
             'use strict';
@@ -132,13 +178,10 @@
 
             async function loadPost(slug) {
                 try {
-                    // fetch post metadata
-                    const indexRes = await fetch('posts/index.json');
-                    const posts = await indexRes.json();
+                    const posts = await window.RNPosts.fetchPosts();
                     const meta = posts.find(p => p.slug === slug);
 
-                    // fetch markdown
-                    const mdRes = await fetch(`posts/${slug}.md`);
+                    const mdRes = await fetch(`posts/${slug}.md`, { cache: 'no-store' });
                     if (!mdRes.ok) throw new Error('post not found');
                     const md = await mdRes.text();
 
@@ -156,7 +199,6 @@
 
                     document.title = `${title} — Rikhil Nellimarla`;
 
-                    // highlight any code blocks
                     contentEl.querySelectorAll('pre code').forEach(block => {
                         hljs.highlightElement(block);
                     });
@@ -173,9 +215,7 @@
 
             async function loadPostList() {
                 try {
-                    const res = await fetch('posts/index.json');
-                    if (!res.ok) throw new Error('no index');
-                    const posts = await res.json();
+                    const posts = await window.RNPosts.fetchPosts();
 
                     if (posts.length === 0) {
                         contentEl.innerHTML = '<p class="blog-empty">nothing here yet. check back soon.</p>';
@@ -184,19 +224,11 @@
 
                     contentEl.innerHTML = `
                     <div class="blog-list">
-                        ${posts.map(post => `
-                            <a href="blog.html?post=${post.slug}" class="blog-list-item">
-                                <time>${post.date}</time>
-                                <div class="list-item-content">
-                                    <h3>${post.title}</h3>
-                                    <p>${post.excerpt}</p>
-                                </div>
-                            </a>
-                        `).join('')}
+                        ${posts.map(post => window.RNPosts.renderBlogListItem(post)).join('')}
                     </div>
                 `;
                 } catch (e) {
-                    contentEl.innerHTML = '<p class="blog-empty">nothing here yet. check back soon.</p>';
+                    // Static fallback list remains in DOM
                 }
             }
         })();

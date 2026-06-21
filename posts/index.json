@@ -1,9 +1,37 @@
 [
     {
+        "slug": "async-events-agent-harness",
+        "title": "Why Agent Harnesses Need a Third Message Type",
+        "date": "2026-06-18",
+        "excerpt": "Agentic Village failed because harnesses only allow input at turn boundaries. The async event primitive is what came out of that failure.",
+        "tags": ["agents", "infrastructure", "research"]
+    },
+    {
+        "slug": "on-prem-ai-government",
+        "title": "On-Prem AI for Government: When the Cloud Is Not an Option",
+        "date": "2026-05-28",
+        "excerpt": "Building on-prem AI for state police — model deployment, staff training, and agentic loops under data residency and operational constraints.",
+        "tags": ["government", "on-prem", "agents", "mlops"]
+    },
+    {
+        "slug": "recon-yc-startup-school",
+        "title": "Recon 2026: Lab Exams, YC Startup School, and a Flagship Fest",
+        "date": "2026-03-15",
+        "excerpt": "Event Director for 600+ participants, ₹21 lakh sponsorship in a month — between back-to-back lab exams and Y Combinator Startup School.",
+        "tags": ["leadership", "startups", "recon"]
+    },
+    {
+        "slug": "sip-livekit-vicidial",
+        "title": "When LiveKit Meets VICIDIAL: Bridging Voice AI to Legacy Telephony",
+        "date": "2026-04-10",
+        "excerpt": "No SDK for VICIDIAL. User/password SIP auth, Asterisk middleware, and 500–600 production calls per day.",
+        "tags": ["voice-ai", "sip", "telephony", "livekit"]
+    },
+    {
         "slug": "hello-world",
         "title": "Building in Public, Starting from Amravati",
         "date": "2026-02-17",
-        "excerpt": "Why I'm starting this blog, what I'm building, and why I think open-source CRMs with voice agents are worth your attention.",
+        "excerpt": "Why I'm starting this blog, what I'm building, and why open-source CRMs with voice agents are worth your attention.",
         "tags": ["meta", "open-source", "voice-ai"]
     }
 ]

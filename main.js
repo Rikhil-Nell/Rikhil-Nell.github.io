@@ -14,13 +14,11 @@
         navToggle.addEventListener('click', () => {
             const isOpen = navLinks.classList.toggle('open');
             navToggle.setAttribute('aria-expanded', isOpen);
-            // swap icon
             navToggle.innerHTML = isOpen
                 ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
                 : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
 
-        // close on link click
         navItems.forEach(item => {
             item.addEventListener('click', () => {
                 navLinks.classList.remove('open');
@@ -30,19 +28,25 @@
         });
     }
 
-    // --- Scroll-based Animations ---
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        },
-        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-    );
+    // --- Scroll-based Animations (skip static/no-motion preference) ---
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+    if (!prefersReducedMotion) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+    } else {
+        document.querySelectorAll('.animate-in').forEach(el => el.classList.add('visible'));
+    }
 
     // --- Active Nav Highlighting ---
     const sections = document.querySelectorAll('section[id]');
@@ -72,12 +76,10 @@
     // --- Load Latest Blog Posts ---
     async function loadLatestPosts() {
         const container = document.getElementById('latest-posts');
-        if (!container) return;
+        if (!container || !window.RNPosts) return;
 
         try {
-            const res = await fetch('posts/index.json');
-            if (!res.ok) throw new Error('no posts');
-            const posts = await res.json();
+            const posts = await window.RNPosts.fetchPosts();
 
             if (posts.length === 0) {
                 container.innerHTML = '<p class="blog-empty">nothing here yet.</p>';
@@ -85,17 +87,12 @@
             }
 
             const latest = posts.slice(0, 3);
-            container.innerHTML = latest.map(post => `
-                <a href="blog.html?post=${post.slug}" class="post-card">
-                    <time>${post.date}</time>
-                    <h3>${post.title}</h3>
-                    <p>${post.excerpt}</p>
-                </a>
-            `).join('');
+            container.innerHTML = latest.map(post => window.RNPosts.renderPostCard(post)).join('');
         } catch (e) {
-            // blog not available — hide section gracefully
-            const blogSection = document.getElementById('blog');
-            if (blogSection) blogSection.style.display = 'none';
+            // Static fallback cards in HTML remain visible — do not hide section
+            if (!container.querySelector('.post-card')) {
+                container.innerHTML = '<p class="blog-empty">could not refresh posts. <a href="blog.html">view blog</a></p>';
+            }
         }
     }
 

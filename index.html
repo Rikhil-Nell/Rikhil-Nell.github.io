@@ -6,16 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rikhil Nellimarla — AI & Backend Engineer</title>
     <meta name="description"
-        content="AI and backend engineer building real-time voice agents, agentic systems, and scalable telephony infrastructure.">
+        content="Production voice AI, agent infrastructure, and telephony systems. On-prem AI for AP State Police, founding engineer at Clink, Event Director of Recon 2026.">
     <meta property="og:title" content="Rikhil Nellimarla — AI & Backend Engineer">
-    <meta property="og:description" content="Building voice agents, agentic backends, and things that ship.">
+    <meta property="og:description"
+        content="Building production voice agents, agentic backends, and telephony infrastructure that ships.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <link rel="alternate" type="text/plain" title="LLM site summary" href="llms.txt">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rikhil Nellimarla",
+        "url": "https://rikhil-nell.github.io/",
+        "email": "nrikhil@gmail.com",
+        "jobTitle": "AI & Backend Engineer",
+        "description": "Builds production voice AI, agent infrastructure, SIP telephony, and on-prem government AI systems.",
+        "sameAs": [
+            "https://github.com/Rikhil-Nell",
+            "https://linkedin.com/in/rikhil-nellimarla",
+            "https://x.com/N_Rikhil"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "VIT Amaravati"
+        },
+        "knowsAbout": [
+            "Voice AI",
+            "SIP telephony",
+            "FastAPI",
+            "Pydantic AI",
+            "Multi-agent systems",
+            "On-prem ML deployment"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -25,11 +56,18 @@
         <div class="container">
             <a href="#" class="nav-logo">rn</a>
             <ul class="nav-links">
+                <li><a href="#highlights">highlights</a></li>
+                <li><a href="#achievements">achievements</a></li>
                 <li><a href="#experience">experience</a></li>
                 <li><a href="#projects">projects</a></li>
-                <li><a href="blog.html">blog</a></li>
                 <li><a href="#contact">contact</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li class="nav-resume-mobile"><a href="assets/Rikhil-Nellimarla-Resume.pdf" target="_blank"
+                        rel="noopener">resume</a></li>
             </ul>
+            <a href="assets/Rikhil-Nellimarla-Resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener">
+                View resume
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="6" x2="21" y2="6" />
@@ -44,70 +82,189 @@
         <!-- Hero -->
         <section id="hero" class="hero">
             <div class="container">
+                <p class="hero-eyebrow">AI · voice infrastructure · agent systems</p>
                 <h1>Rikhil Nellimarla</h1>
-                <p class="tagline"><span class="prefix">&gt;</span> building voice agents, agentic backends, and things
-                    that ship</p>
+                <p class="tagline"><span class="prefix">&gt;</span> production voice AI, agent backends, and telephony
+                    that ships</p>
                 <p class="about-brief">
-                    AI and backend engineer with a background in electronics. I build real-time voice AI systems,
-                    multi-agent architectures, and the telephony infrastructure that connects them to the real world.
-                    Currently a 3rd-year ECE undergrad at VIT Amaravati.
+                    I build real-time voice agents, multi-agent architectures, and the SIP/Asterisk infrastructure
+                    behind them — not demos. Production systems handling hundreds of calls a day, GH200-scale data
+                    pipelines, founding-engineer work at startups, and on-prem AI infrastructure for Andhra Pradesh
+                    State Police. ECE at VIT Amaravati; most of my learning happens in production.
                 </p>
-                <div class="hero-links">
+
+                <div class="hero-cta">
+                    <a href="assets/Rikhil-Nellimarla-Resume.pdf" class="btn btn-primary" target="_blank"
+                        rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                        View full resume
+                    </a>
+                    <a href="mailto:nrikhil@gmail.com" class="btn btn-secondary">Email me</a>
+                </div>
+
+                <dl class="proof-metrics" aria-label="Production scale and impact">
+                    <div class="proof-metric">
+                        <dt>calls / day</dt>
+                        <dd>500–600</dd>
+                    </div>
+                    <div class="proof-metric">
+                        <dt>call logs processed</dt>
+                        <dd>1M+</dd>
+                    </div>
+                    <div class="proof-metric">
+                        <dt>cafes onboarded</dt>
+                        <dd>80+</dd>
+                    </div>
+                    <div class="proof-metric">
+                        <dt>event attendees</dt>
+                        <dd>600+</dd>
+                    </div>
+                </dl>
+
+                <div class="hero-links" aria-label="Social links">
                     <a href="https://github.com/Rikhil-Nell" target="_blank" rel="noopener">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
                         </svg>
                         GitHub
                     </a>
                     <a href="https://linkedin.com/in/rikhil-nellimarla" target="_blank" rel="noopener">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                         LinkedIn
                     </a>
                     <a href="https://x.com/N_Rikhil" target="_blank" rel="noopener">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
                         X
                     </a>
-                    <a href="mailto:nrikhil@gmail.com">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="4" width="20" height="16" rx="2" />
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                        </svg>
-                        Email
-                    </a>
-                    <a href="https://drive.google.com/file/d/1SCqWASNST28dtWw614OhMuq4sV9QVGOs/view?usp=drive_link"
-                        target="_blank" rel="noopener">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                            <polyline points="14 2 14 8 20 8" />
-                            <line x1="16" y1="13" x2="8" y2="13" />
-                            <line x1="16" y1="17" x2="8" y2="17" />
-                            <polyline points="10 9 9 9 8 9" />
-                        </svg>
-                        Resume
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Latest Posts -->
-        <section id="blog">
+        <!-- Highlights -->
+        <section id="highlights" class="highlights">
             <div class="container">
-                <h2 class="section-title"><span class="prefix">&gt;</span> latest posts</h2>
-                <div id="latest-posts" class="latest-posts">
-                    <!-- populated by main.js -->
+                <h2 class="section-title"><span class="prefix">&gt;</span> what to look at first</h2>
+                <p class="section-lead">The strongest proof points — production scale, leadership, and shipped work.</p>
+
+                <div class="highlights-grid">
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">production</span>
+                        <h3>Voice AI at scale</h3>
+                        <p>Production agents handling <strong>500–600 calls/day</strong> on SIP/Asterisk/FreePBX —
+                            inbound qualification, outbound follow-ups, live transfer, and CRM handoff.</p>
+                        <a href="blog.html?post=sip-livekit-vicidial" class="highlight-link">SIP write-up →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">government</span>
+                        <h3>On-prem AI for AP State Police</h3>
+                        <p>Building on-prem AI infrastructure for the Andhra Pradesh State Police — model deployment
+                            pipelines, training staff on local inference, and agentic workflow loops under data
+                            residency constraints. Earlier led backend and on-site tech for AP CID home guard exams.</p>
+                        <a href="blog.html?post=on-prem-ai-government" class="highlight-link">On-prem write-up →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">leadership</span>
+                        <h3>Recon 2026 Event Director</h3>
+                        <p><strong>600+ participants</strong>, 80-person team. Closed <strong>₹21 lakh sponsorship</strong>
+                            in under a month, built the website and infra, negotiated the first private VLAN on campus.
+                            Lab exams on the 17th, inaugurated the event on the 19th.</p>
+                        <a href="blog.html?post=recon-yc-startup-school" class="highlight-link">Recon write-up →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">startups</span>
+                        <h3>Y Combinator Startup School</h3>
+                        <p>Selected participant — structured startup validation, founder-market fit exploration, and
+                            early-stage product development with a global founder cohort. Attended between back-to-back
+                            ECE lab exams and inaugurating Recon 2026.</p>
+                        <a href="#achievements" class="highlight-link">All achievements →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">founding engineer</span>
+                        <h3>Clink AI platform</h3>
+                        <p>Founding AI engineer: taste-based recommendation engine, <strong>8+ Pydantic AI agents</strong>,
+                            customer intelligence (RFM, churn), serving <strong>80+ cafes</strong> on FastAPI + PostgreSQL +
+                            Redis.</p>
+                        <a href="#experience" class="highlight-link">Clink role →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">infrastructure</span>
+                        <h3>1M+ call log pipeline</h3>
+                        <p>Bare-metal GH200 pipeline: Whisper v3 transcription, PII sanitization, multi-agent performance
+                            analysis. Pioneered SIP trunking to bridge LiveKit with legacy VICIDIAL.</p>
+                        <a href="#experience" class="highlight-link">Indominus Labs →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">recognition</span>
+                        <h3>Demoed to Chief Minister</h3>
+                        <p>Shipped multimodal AI backend for VISU-X humanoid robot in one month — real-time speech,
+                            vision, facial recognition. Presented to <strong>CM Chandrababu Naidu</strong> at VLaunchPad.</p>
+                        <a href="https://github.com/Rikhil-Nell/VISU-X" target="_blank" rel="noopener"
+                            class="highlight-link">VISU-X repo →</a>
+                    </article>
+
+                    <article class="highlight-card animate-in">
+                        <span class="highlight-badge">talks & wins</span>
+                        <h3>Talks, hackathons, community</h3>
+                        <p>Technical talks on agent architectures and LLM security to <strong>100+ attendees</strong>
+                            per session (Null Vijayawada, NIT Warangal, SRM). Winner HackSRM 2024. 3rd at Post-a-thon —
+                            showcased IntelliPost to Union Minister Shri Chandra Sekhar Pemmasani. Led Pixy paper reading
+                            sessions.</p>
+                        <a href="#achievements" class="highlight-link">Full list →</a>
+                    </article>
                 </div>
-                <div class="blog-link">
-                    <a href="blog.html">all posts →</a>
-                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+            <div class="container">
+                <h2 class="section-title"><span class="prefix">&gt;</span> achievements</h2>
+                <p class="section-lead">Recognition, leadership, and public impact — the full list from my resume.</p>
+                <ul class="achievements-list">
+                    <li class="animate-in">Selected participant in <strong>Y Combinator Startup School</strong>,
+                        engaging in structured startup validation, founder-market fit exploration, and early-stage
+                        product development with global founder cohorts.</li>
+                    <li class="animate-in"><strong>Event Director for Recon 2026</strong> (VIT-AP's flagship tech fest),
+                        leading end-to-end planning and execution of a multi-day event involving cross-functional teams,
+                        sponsorship coordination, speaker onboarding, and large-scale participant management — 600+
+                        participants, ₹21 lakh sponsorship in under a month.</li>
+                    <li class="animate-in">Presented the <strong>VISU humanoid robot project</strong> to the Chief
+                        Minister of AP, Mr. Chandrababu Naidu, at VLaunchPad.</li>
+                    <li class="animate-in"><strong>Winner of HackSRM 2024</strong> (Open Innovation track) for the
+                        MemoryWeave project.</li>
+                    <li class="animate-in">Secured <strong>3rd place in Post-a-thon</strong> at VIT-AP and showcased
+                        my mobile app for automating pincode mapping to Union Minister Shri Chandra Sekhar Pemmasani.
+                    </li>
+                    <li class="animate-in">Delivered technical talks on <strong>agent-based architectures and LLM
+                            security</strong> to 100+ attendees per session at Null Vijayawada, NIT Warangal, and SRM
+                        University.</li>
+                    <li class="animate-in">Led the <strong>backend and on-site tech team</strong> for the AP CID home
+                        guard exams.</li>
+                    <li class="animate-in">Led multiple <strong>paper reading sessions</strong> on the architecture of
+                        the Pixy Discord bot and related AI systems.</li>
+                    <li class="animate-in">Building <strong>on-prem AI infrastructure</strong> for the Andhra Pradesh
+                        State Police — training staff on model deployment and setting up agentic loops for operational
+                        workflows.</li>
+                </ul>
             </div>
         </section>
 
@@ -120,6 +277,21 @@
 
                     <div class="experience-item animate-in">
                         <div class="experience-header">
+                            <h3>Andhra Pradesh State Police</h3>
+                            <span class="experience-date">Sep 2025 – Present</span>
+                        </div>
+                        <div class="experience-role">Technical Lead, AI Infrastructure</div>
+                        <div class="experience-location">Andhra Pradesh, India</div>
+                        <p class="experience-desc">
+                            Building on-prem AI infrastructure for state police operations — local model deployment
+                            pipelines, training staff on inference and monitoring, and designing agentic workflow loops
+                            with human-in-the-loop guardrails. Previously led backend and on-site infrastructure for AP
+                            CID home guard exam systems.
+                        </p>
+                    </div>
+
+                    <div class="experience-item animate-in">
+                        <div class="experience-header">
                             <h3>TargetDial</h3>
                             <span class="experience-date">Jan 2026 – Feb 2026</span>
                         </div>
@@ -127,11 +299,9 @@
                         <div class="experience-location">Virtual (US-based)</div>
                         <p class="experience-desc">
                             Built and shipped production AI voice agents integrated with SIP/Asterisk/FreePBX telephony
-                            stacks
-                            for inbound lead qualification and outbound follow-ups. Designed end-to-end call workflows
-                            spanning
-                            voice → intent detection → CRM actions → calendar booking with GoHighLevel and n8n
-                            automations.
+                            stacks for inbound lead qualification and outbound follow-ups. Designed end-to-end call
+                            workflows spanning voice → intent detection → CRM actions → calendar booking with
+                            GoHighLevel and n8n automations.
                         </p>
                     </div>
 
@@ -144,10 +314,9 @@
                         <div class="experience-location">Hyderabad, India</div>
                         <p class="experience-desc">
                             Pioneered SIP trunking integration to bridge LiveKit with legacy telephony providers
-                            (VICIDIAL).
-                            Engineered a scalable data pipeline on bare-metal GH200 to process 1M+ customer call logs
-                            with
-                            Whisper v3 transcription, PII sanitization, and multi-agent performance analysis.
+                            (VICIDIAL). Engineered a scalable data pipeline on bare-metal GH200 to process 1M+ customer
+                            call logs with Whisper v3 transcription, PII sanitization, and multi-agent performance
+                            analysis.
                         </p>
                     </div>
 
@@ -160,10 +329,8 @@
                         <div class="experience-location">Virtual</div>
                         <p class="experience-desc">
                             Developed a custom turn-detection model for Hindi, overcoming a core LiveKit SDK limitation
-                            for
-                            non-English voice agents. Architected scalable telephony infrastructure using Asterisk as
-                            middleware
-                            to route calls to various endpoints including WhatsApp.
+                            for non-English voice agents. Architected scalable telephony infrastructure using Asterisk as
+                            middleware to route calls to various endpoints including WhatsApp.
                         </p>
                     </div>
 
@@ -176,10 +343,26 @@
                         <div class="experience-location">Virtual · Pre-seed cafe analytics startup</div>
                         <p class="experience-desc">
                             Built a full-stack AI backend orchestrating 8+ specialized agents for analysis, chat,
-                            forecasting,
-                            and image generation — serving 80+ onboarded cafes. Production infrastructure with
-                            PostgreSQL,
-                            Redis, S3, and full async observability via Logfire.
+                            forecasting, and image generation — serving 80+ onboarded cafes. Designed recommendation
+                            architecture and customer intelligence (RFM, churn). Production infrastructure with
+                            PostgreSQL, Redis, S3, and full async observability via Logfire.
+                        </p>
+                    </div>
+
+                    <div class="experience-item animate-in">
+                        <div class="experience-header">
+                            <h3>Recon 2026</h3>
+                            <span class="experience-date">Aug 2025 – Mar 2026</span>
+                        </div>
+                        <div class="experience-role">Event Director</div>
+                        <div class="experience-location">VIT Amaravati, India · Flagship tech fest</div>
+                        <p class="experience-desc">
+                            Led end-to-end planning and execution of a multi-day flagship fest with 600+ participants
+                            and an 80-person team. Closed ₹21 lakh in sponsorship in under a month, built and deployed
+                            the event website, negotiated the first private VLAN on campus for King of the Hill
+                            infrastructure, coordinated speaker onboarding, and managed cross-functional volunteer teams.
+                            Selected for Y Combinator Startup School during the same period — lab exams on the 17th,
+                            Startup School in Bangalore on the 18th, inaugurated Recon on the 19th.
                         </p>
                     </div>
 
@@ -193,8 +376,7 @@
                         <p class="experience-desc">
                             Leading 100+ student developers in open-source practices. Conducting workshops on WebRTC,
                             API Design, and Backend Development. Overseeing 6 open-source projects with technical
-                            roadmap
-                            and code review processes.
+                            roadmap and code review processes.
                         </p>
                     </div>
 
@@ -214,7 +396,7 @@
                         <div class="project-card-header">
                             <h3>Kinesys-CRM</h3>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
                                 <line x1="10" y1="14" x2="21" y2="3" />
@@ -236,7 +418,7 @@
                         <div class="project-card-header">
                             <h3>VISU-X</h3>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
                                 <line x1="10" y1="14" x2="21" y2="3" />
@@ -259,7 +441,7 @@
                         <div class="project-card-header">
                             <h3>VoiceIQ</h3>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
                                 <line x1="10" y1="14" x2="21" y2="3" />
@@ -279,7 +461,7 @@
                         <div class="project-card-header">
                             <h3>Multi-Agentic Graph RAG</h3>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
                                 <line x1="10" y1="14" x2="21" y2="3" />
@@ -300,7 +482,7 @@
                         <div class="project-card-header">
                             <h3>IntelliPost</h3>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
                                 <line x1="10" y1="14" x2="21" y2="3" />
@@ -321,7 +503,7 @@
                         <div class="project-card-header">
                             <h3>Lexalytics</h3>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
                                 <line x1="10" y1="14" x2="21" y2="3" />
@@ -371,7 +553,7 @@
             <div class="container">
                 <h2 class="section-title"><span class="prefix">&gt;</span> skills</h2>
 
-                <div class="skills-group animate-in">
+                <div class="skills-group">
                     <div class="skills-label">languages</div>
                     <div class="skills-tags">
                         <span>Python</span>
@@ -385,7 +567,7 @@
                     </div>
                 </div>
 
-                <div class="skills-group animate-in">
+                <div class="skills-group">
                     <div class="skills-label">ml & ai</div>
                     <div class="skills-tags">
                         <span>PyTorch</span>
@@ -401,7 +583,7 @@
                     </div>
                 </div>
 
-                <div class="skills-group animate-in">
+                <div class="skills-group">
                     <div class="skills-label">agentic & generative ai</div>
                     <div class="skills-tags">
                         <span>LangChain</span>
@@ -412,7 +594,7 @@
                     </div>
                 </div>
 
-                <div class="skills-group animate-in">
+                <div class="skills-group">
                     <div class="skills-label">backend & telephony</div>
                     <div class="skills-tags">
                         <span>FastAPI</span>
@@ -423,10 +605,11 @@
                         <span>FreePBX</span>
                         <span>SIP Trunking</span>
                         <span>RTP/NAT</span>
+                        <span>VICIDIAL</span>
                     </div>
                 </div>
 
-                <div class="skills-group animate-in">
+                <div class="skills-group">
                     <div class="skills-label">databases & storage</div>
                     <div class="skills-tags">
                         <span>PostgreSQL</span>
@@ -439,12 +622,14 @@
                     </div>
                 </div>
 
-                <div class="skills-group animate-in">
+                <div class="skills-group">
                     <div class="skills-label">cloud & devops</div>
                     <div class="skills-tags">
                         <span>AWS</span>
                         <span>Docker</span>
                         <span>NGINX</span>
+                        <span>Tailscale</span>
+                        <span>n8n</span>
                         <span>GitHub Actions</span>
                         <span>VPS/Linux</span>
                         <span>Logfire</span>
@@ -453,71 +638,111 @@
             </div>
         </section>
 
-        <!-- Achievements -->
-        <section id="achievements">
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
             <div class="container">
-                <h2 class="section-title"><span class="prefix">&gt;</span> achievements</h2>
-                <ul class="achievements-list">
-                    <li class="animate-in"><strong>Presented the VISU humanoid robot</strong> to the Chief Minister of
-                        Andhra Pradesh, Mr. Chandrababu Naidu, at VLaunchPad.</li>
-                    <li class="animate-in"><strong>Winner, HackSRM 2024</strong> (Open Innovation track) for the
-                        MemoryWeave project.</li>
-                    <li class="animate-in"><strong>3rd Place, Post-a-thon</strong> at VIT-AP — showcased IntelliPost to
-                        Union Minister Shri Chandra Sekhar Pemmasani.</li>
-                    <li class="animate-in"><strong>Technical talks to 100+ attendees</strong> on agent architectures and
-                        LLM security at Null Vijayawada, NIT Warangal, and SRM University.</li>
-                    <li class="animate-in"><strong>Led the tech team for AP CID</strong> home guard exams — backend and
-                        on-site infrastructure.</li>
-                </ul>
+                <h2 class="section-title"><span class="prefix">&gt;</span> contact</h2>
+                <p class="section-lead">Best way to reach me — email or LinkedIn for roles, collabs, and interesting problems.</p>
+                <div class="contact-grid">
+                    <a href="mailto:nrikhil@gmail.com" class="contact-card">
+                        <span class="contact-label">email</span>
+                        <span class="contact-value">nrikhil@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/rikhil-nellimarla" target="_blank" rel="noopener" class="contact-card">
+                        <span class="contact-label">linkedin</span>
+                        <span class="contact-value">rikhil-nellimarla</span>
+                    </a>
+                    <a href="https://github.com/Rikhil-Nell" target="_blank" rel="noopener" class="contact-card">
+                        <span class="contact-label">github</span>
+                        <span class="contact-value">Rikhil-Nell</span>
+                    </a>
+                    <a href="assets/Rikhil-Nellimarla-Resume.pdf" target="_blank" rel="noopener" class="contact-card">
+                        <span class="contact-label">resume</span>
+                        <span class="contact-value">download PDF</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Posts -->
+        <section id="blog">
+            <div class="container">
+                <h2 class="section-title"><span class="prefix">&gt;</span> latest posts</h2>
+                <div id="latest-posts" class="latest-posts">
+                    <a href="blog.html?post=async-events-agent-harness" class="post-card">
+                        <time>2026-06-18</time>
+                        <h3>Why Agent Harnesses Need a Third Message Type</h3>
+                        <p>Agentic Village failed because harnesses only allow input at turn boundaries. The async event primitive is what came out of that failure.</p>
+                    </a>
+                    <a href="blog.html?post=on-prem-ai-government" class="post-card">
+                        <time>2026-05-28</time>
+                        <h3>On-Prem AI for Government: When the Cloud Is Not an Option</h3>
+                        <p>Building on-prem AI for state police — model deployment, staff training, and agentic loops under data residency and operational constraints.</p>
+                    </a>
+                    <a href="blog.html?post=sip-livekit-vicidial" class="post-card">
+                        <time>2026-04-10</time>
+                        <h3>When LiveKit Meets VICIDIAL: Bridging Voice AI to Legacy Telephony</h3>
+                        <p>No SDK for VICIDIAL. User/password SIP auth, Asterisk middleware, and 500–600 production calls per day.</p>
+                    </a>
+                </div>
+                <div class="blog-link">
+                    <a href="blog.html">all posts →</a>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
-            <span class="footer-text">rikhil nellimarla · amravati, india</span>
-            <div class="footer-links">
-                <a href="https://github.com/Rikhil-Nell" target="_blank" rel="noopener" aria-label="GitHub">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <div class="footer-primary">
+                <span class="footer-text">rikhil nellimarla · amravati, india</span>
+                <a href="assets/Rikhil-Nellimarla-Resume.pdf" class="footer-resume-link" target="_blank"
+                    rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    Download resume (PDF)
+                </a>
+            </div>
+            <div class="footer-links" aria-label="Contact and social links">
+                <a href="https://github.com/Rikhil-Nell" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
                     </svg>
+                    GitHub
                 </a>
-                <a href="https://linkedin.com/in/rikhil-nellimarla" target="_blank" rel="noopener"
-                    aria-label="LinkedIn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://linkedin.com/in/rikhil-nellimarla" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
+                    LinkedIn
                 </a>
-                <a href="https://x.com/N_Rikhil" target="_blank" rel="noopener" aria-label="X">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://x.com/N_Rikhil" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
+                    X
                 </a>
-                <a href="mailto:nrikhil@gmail.com" aria-label="Email">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="mailto:nrikhil@gmail.com">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
                         <rect x="2" y="4" width="20" height="16" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                     </svg>
-                </a>
-                <a href="https://drive.google.com/file/d/1SCqWASNST28dtWw614OhMuq4sV9QVGOs/view?usp=drive_link"
-                    target="_blank" rel="noopener" aria-label="Resume">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                        <polyline points="14 2 14 8 20 8" />
-                        <line x1="16" y1="13" x2="8" y2="13" />
-                        <line x1="16" y1="17" x2="8" y2="17" />
-                        <polyline points="10 9 9 9 8 9" />
-                    </svg>
+                    nrikhil@gmail.com
                 </a>
             </div>
         </div>
     </footer>
 
+    <script src="posts.js"></script>
     <script src="main.js"></script>
 </body>
 

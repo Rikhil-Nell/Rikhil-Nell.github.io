@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rikhil-nell.github.io/sitemap.xml
