@@ -6,10 +6,10 @@ That is fine for chatbots. It breaks for anything that should exist **over time*
 
 ## The Agentic Village experiment
 
-I wanted a village — multiple agents coexisting continuously, not wake-on-prompt chatbots. Each agent needed a **body/mind split**:
+I wanted a village, multiple agents coexisting continuously, not wake-on-prompt chatbots. Each agent needed a **body/mind split**:
 
-- **Mind** — instructions, reasoning, personality
-- **Body** — scheduler, clock, triggers; reprograms the mind as time passes
+- **Mind**: instructions, reasoning, personality
+- **Body**: scheduler, clock, triggers; reprograms the mind as time passes
 
 I built a prototype: multi-agent messaging, a custom clock, temporal context injection. It was bad.
 
@@ -42,25 +42,25 @@ tool result
 assistant message
 ```
 
-A third message category — **async events** — injected at safe points during execution without restarting the turn loop.
+A third message category, **async events**: injected at safe points during execution without restarting the turn loop.
 
 Use cases:
 
-- **Context compaction** — runtime signals 80% full; agent dispatches compaction without breaking the loop
-- **Inter-agent communication** — Agent B needs something from Agent A mid-execution
-- **Runtime alerts** — rate limits, subagent completion, critical external signals
+- **Context compaction**: runtime signals 80% full; agent dispatches compaction without breaking the loop
+- **Inter-agent communication**: Agent B needs something from Agent A mid-execution
+- **Runtime alerts**: rate limits, subagent completion, critical external signals
 
 Pitch line I keep coming back to: **agents today have one sensory channel. This adds the rest.**
 
 ## Honest status
 
-This is systems investigation, not shipped product. The prototype failure is evidence. The open problem — event semantics during tool calls, subagent spawn, nested events — is where real engineering lives.
+This is systems investigation, not shipped product. The prototype failure is evidence. The open problem, event semantics during tool calls, subagent spawn, nested events, is where real engineering lives.
 
-Clink is shipped multi-agent orchestration at the application layer. Agentic Village + async events is runtime architecture one layer below — the harness problem that blocked the embodiment experiment.
+Clink is shipped multi-agent orchestration at the application layer. Agentic Village + async events is runtime architecture one layer below, the harness problem that blocked the embodiment experiment.
 
 ## Prior art
 
-`session.steer` in some harnesses, dynamic system prompts before execution, LangGraph interrupts — related but different semantics. Nobody has a clean public answer for mid-reasoning external events yet.
+`session.steer` in some harnesses, dynamic system prompts before execution, LangGraph interrupts, related but different semantics. Nobody has a clean public answer for mid-reasoning external events yet.
 
 What would establish the idea: public design doc, reference implementation, compelling demo (context compaction or boiler-room maintenance agent).
 

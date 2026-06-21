@@ -1,5 +1,5 @@
 /* ===========================
-   Portfolio — Interactions
+   Portfolio, Interactions
    =========================== */
 
 (function () {
@@ -73,28 +73,24 @@
     window.addEventListener('scroll', updateActiveNav, { passive: true });
     updateActiveNav();
 
-    // --- Load Latest Blog Posts ---
-    async function loadLatestPosts() {
-        const container = document.getElementById('latest-posts');
+    // --- Refresh recent writing links (only if index has posts; never shrink below static fallback) ---
+    async function loadRecentWriting() {
+        const container = document.getElementById('recent-writing');
         if (!container || !window.RNPosts) return;
+
+        const staticCount = container.querySelectorAll('.writing-link').length;
 
         try {
             const posts = await window.RNPosts.fetchPosts();
+            if (posts.length === 0) return;
+            // Don't replace static fallbacks with a shorter list (e.g. stale deploy with 1 post)
+            if (staticCount > 0 && posts.length < staticCount) return;
 
-            if (posts.length === 0) {
-                container.innerHTML = '<p class="blog-empty">nothing here yet.</p>';
-                return;
-            }
-
-            const latest = posts.slice(0, 3);
-            container.innerHTML = latest.map(post => window.RNPosts.renderPostCard(post)).join('');
+            container.innerHTML = posts.map(post => window.RNPosts.renderWritingLink(post)).join('');
         } catch (e) {
-            // Static fallback cards in HTML remain visible — do not hide section
-            if (!container.querySelector('.post-card')) {
-                container.innerHTML = '<p class="blog-empty">could not refresh posts. <a href="blog.html">view blog</a></p>';
-            }
+            // Static links in HTML stay visible
         }
     }
 
-    loadLatestPosts();
+    loadRecentWriting();
 })();

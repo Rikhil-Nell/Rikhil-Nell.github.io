@@ -1,6 +1,6 @@
 # Building in Public, Starting from Amravati
 
-I've been meaning to start writing for a while. Not the "5 tips for productivity" kind of writing — the kind where you talk about what you're actually building, what broke, what you learned, and why you made the choices you did.
+I've been meaning to start writing for a while. Not the "5 tips for productivity" kind of writing, the kind where you talk about what you're actually building, what broke, what you learned, and why you made the choices you did.
 
 So here's the deal: I'm a third-year ECE undergrad at VIT Amaravati, and I've spent the last year building voice AI systems, agentic backends, and production infrastructure for startups. I've shipped SIP trunking integrations, processed a million call logs on a GH200, built multi-agent systems for cafes, and architected telephony middleware that routes calls through Asterisk.
 
@@ -8,9 +8,9 @@ None of that came from a course. Most of it came from 14-hour days, reading sour
 
 ## What I'm Working On
 
-**Kinesys CRM** — an open-source, self-hostable CRM with AI-powered voice agents built in. Think of it as what Zoho or HubSpot would be if they were built by someone who actually understands telephony infrastructure and didn't want to charge you $500/month for features you'll never use.
+**Kinesys CRM**: an open-source, self-hostable CRM with AI-powered voice agents built in. Think of it as what Zoho or HubSpot would be if they were built by someone who actually understands telephony infrastructure and didn't want to charge you $500/month for features you'll never use.
 
-The idea is simple: small B2B SaaS teams shouldn't need to hire a sales team AND pay for enterprise CRM software. If an AI agent can handle inbound qualification and outbound follow-ups — and you can self-host the whole thing — that changes the equation.
+The idea is simple: small B2B SaaS teams shouldn't need to hire a sales team AND pay for enterprise CRM software. If an AI agent can handle inbound qualification and outbound follow-ups, and you can self-host the whole thing, that changes the equation.
 
 ## Why I'm Writing
 
