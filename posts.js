@@ -1,4 +1,4 @@
-/* Shared blog post loader — used by index (main.js) and blog.html */
+/* Shared blog post loader, used by index (main.js) and blog.html */
 (function () {
     'use strict';
 
@@ -33,10 +33,20 @@
         `;
     }
 
+    function renderWritingLink(post) {
+        return `
+            <a href="blog.html?post=${post.slug}" class="writing-link">
+                <time>${post.date}</time>
+                <span>${post.title}</span>
+            </a>
+        `;
+    }
+
     window.RNPosts = {
         INDEX_URL,
         fetchPosts,
         renderPostCard,
-        renderBlogListItem
+        renderBlogListItem,
+        renderWritingLink
     };
 })();

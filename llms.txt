@@ -1,13 +1,13 @@
-# Rikhil Nellimarla — https://rikhil-nell.github.io
+# Rikhil Nellimarla | https://remiscus.me
 
 > AI and backend engineer building production voice AI, agent infrastructure, and on-prem government AI systems.
 
 ## Canonical URLs
 
-- Home: https://rikhil-nell.github.io/
-- Blog: https://rikhil-nell.github.io/blog.html
-- Resume (PDF): https://rikhil-nell.github.io/assets/Rikhil-Nellimarla-Resume.pdf
-- Sitemap: https://rikhil-nell.github.io/sitemap.xml
+- Home: https://remiscus.me/
+- Blog: https://remiscus.me/blog.html
+- Resume (PDF): https://remiscus.me/assets/Rikhil-Nellimarla-Resume.pdf
+- Sitemap: https://remiscus.me/sitemap.xml
 - GitHub: https://github.com/Rikhil-Nell
 - LinkedIn: https://linkedin.com/in/rikhil-nellimarla
 - Email: nrikhil@gmail.com
@@ -18,23 +18,18 @@ Rikhil Nellimarla builds real-time voice agents, multi-agent backends, and SIP/A
 
 ## Site sections (homepage)
 
-- #highlights — strongest proof points
-- #achievements — full achievements list
-- #experience — work history
-- #projects — open-source and shipped projects
-- #skills — technical skills
-- #contact — email and social links
-- #blog — latest blog posts (also at blog.html)
+- #highlights: strongest proof points
+- #achievements: full achievements list
+- #experience: work history
+- #projects: open-source and shipped projects
+- #skills: technical skills
+- #contact: email, social links, and recent writing
 
-## Blog posts
+## Blog
 
-- async-events-agent-harness — Agent harness async event primitive (2026-06-18)
-- on-prem-ai-government — On-prem AI for government / state police (2026-05-28)
-- sip-livekit-vicidial — LiveKit to VICIDIAL SIP bridging (2026-04-10)
-- recon-yc-startup-school — Recon 2026 Event Director + YC Startup School (2026-03-15)
-- hello-world — Building in public intro (2026-02-17)
+Full archive: https://remiscus.me/blog.html
 
-Post URL pattern: https://rikhil-nell.github.io/blog.html?post={slug}
+Post URL pattern: https://remiscus.me/blog.html?post={slug}
 
 ## Primary stacks
 
