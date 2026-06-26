@@ -2,6 +2,19 @@
 (function () {
     'use strict';
 
+    // Clean GitHub Pages URLs: /index.html -> /, strip trailing lone #
+    (function cleanUrl() {
+        const { pathname, search, hash, href } = window.location;
+        if (pathname === '/index.html' || pathname.endsWith('/index.html')) {
+            const base = pathname.replace(/\/?index\.html$/, '/') || '/';
+            history.replaceState(null, '', base + search + hash);
+            return;
+        }
+        if ((pathname === '/' || pathname === '') && hash === '' && href.endsWith('#')) {
+            history.replaceState(null, '', '/' + search);
+        }
+    })();
+
     const INDEX_URL = 'posts/index.json';
 
     async function fetchPosts() {
