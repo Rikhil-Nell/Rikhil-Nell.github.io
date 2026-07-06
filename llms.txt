@@ -14,7 +14,7 @@
 
 ## Summary
 
-Rikhil Nellimarla builds real-time voice agents, multi-agent backends, and SIP/Asterisk telephony infrastructure. Production systems include 500–600 calls/day voice agents, a 1M+ call log GH200 pipeline, founding AI engineer work at Clink (80+ cafes), and on-prem AI infrastructure for Andhra Pradesh State Police. Event Director for Recon 2026 (600+ participants, ₹21 lakh sponsorship). Y Combinator Startup School participant.
+Rikhil Nellimarla builds real-time voice agents, multi-agent backends, and SIP/Asterisk telephony infrastructure. Production systems include 500–600 calls/day voice agents, a 1M+ call log GH200 pipeline, founding AI engineer work at Clink (80+ cafes), and on-prem AI infrastructure for Andhra Pradesh State Police. Author of sybl (https://github.com/Rikhil-Nell/sybl), an open-source BYOK voice dictation tool for Windows on PyPI (v0.1.2). Event Director for Recon 2026 (600+ participants, ₹21 lakh sponsorship). Y Combinator Startup School participant.
 
 ## Site sections (homepage)
 
